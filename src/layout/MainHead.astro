@@ -1,0 +1,82 @@
+---
+interface Props {
+	title: string
+	description: string
+	keywords: string
+	author: string
+}
+const { title, description, keywords, author } = Astro.props
+---
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="generator" content={Astro.generator} />
+	{description && <meta name="description" content={description} />}
+	{keywords && <meta name="keywords" content={keywords} />}
+	{author && <meta name="author" content={author} />}
+	<meta name="robots" content="index, follow" />
+	<title>{title}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet"
+	/>
+
+	<link rel="stylesheet" href="src/styles/global.css" />
+
+	<!-- Open Graph Meta Tags (for social sharing) -->
+	<meta property="og:title" content="Anil Rai - Developer | Designer | Programmer" />
+	<meta
+		property="og:description"
+		content="Anil Rai is a Developer, Designer, and Programmer specializing in web development and design. Explore his portfolio and insightful blog posts."
+	/>
+	<!-- <meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.example.com/johndoe" />
+	<meta property="og:image" content="https://www.example.com/johndoe.jpg" /> -->
+
+	<!-- Twitter Card Meta Tags (for Twitter sharing) -->
+	<!-- <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Anil Rai - Developer | Designer | Programmer" />
+	<meta
+		name="twitter:description"
+		content="Anil Rai is a Developer, Designer, and Programmer specializing in web development and design. Explore his portfolio and insightful blog posts."
+	/>
+	<meta name="twitter:image" content="https://www.example.com/johndoe.jpg" /> -->
+
+	<!-- <link rel="canonical" href="https://www.example.com/johndoe" /> -->
+
+	<!-- Favicon -->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> -->
+
+	<!-- CSS and JavaScript files -->
+	<!-- <link rel="stylesheet" href="/styles.css" />
+	<script defer src="/main.js"></script> -->
+
+	<!-- RSS Feed -->
+	<!-- <link
+		rel="alternate"
+		type="application/rss+xml"
+		title="John Doe's Blog RSS Feed"
+		href="/rss.xml"
+	/> -->
+
+	<!-- JSON-LD for structured data (for blogs) -->
+	<!-- <script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Person",
+			"name": "John Doe",
+			"jobTitle": "Developer, Designer, Programmer",
+			"url": "https://www.example.com/johndoe",
+			"sameAs": [
+				"https://www.linkedin.com/in/johndoe",
+				"https://twitter.com/johndoe",
+				"https://github.com/johndoe"
+			]
+		}
+	</script> -->
+</head>

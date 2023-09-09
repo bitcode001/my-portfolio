@@ -1,0 +1,23 @@
+---
+import MainHead from './MainHead.astro'
+interface Props {
+	title: string
+	description?: string
+	keywords?: string
+	author?: string
+	children?: any
+}
+const { title, description, keywords, author } = Astro.props
+---
+
+<html lang="en">
+	<MainHead
+		{title}
+		description={description ?? ''}
+		keywords={keywords ?? ''}
+		author={author ?? ''}
+	/>
+	<body class="bg-bgCol">
+		<slot />
+	</body>
+</html>
