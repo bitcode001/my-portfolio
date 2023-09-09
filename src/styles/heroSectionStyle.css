@@ -1,0 +1,47 @@
+.mask-hero {
+	/* -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQ2IiBoZWlnaHQ9IjUwMSIgdmlld0JveD0iMCAwIDQ0NiA1MDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjM1LjUgMi41QzI2NS45MDIgMi4zMTM5OCAyOTcuMzY5IC0yLjk3MTM0IDMyNS42MjYgNS41MDExOEMzNTQuMDkgMTQuMDM1NyAzNzYuNzUxIDMxLjM5MzMgMzk0LjU3OSA1MC4xOTc1QzQxMS42ODggNjguMjQyOSA0MTUuMzQ5IDkwLjk0MyA0MjYuMTkgMTExLjU3MUM0MzcuNjczIDEzMy40MjMgNDQzLjkxNiAzMjMuMDQ1IDQ0NC45NTcgMzQ2LjU0QzQ0Ni4wMiAzNzAuNTI0IDQzMS43NDYgMzkzLjQyMyA0MTYuMTk5IDQxNC4zNTJDNDAwLjU2MiA0MzUuNDAxIDM3OS42NTUgNDUzLjkyIDM1NC4yODUgNDY4LjZDMzI4LjYxNyA0ODMuNDUxIDMwMC4xNDMgNDk4LjE5MSAyNjcuOTEyIDUwMC4xNDlDMjM2LjA3MiA1MDIuMDg0IDIwOC41MjUgNDg0LjE0OSAxNzcuMjE5IDQ3OS4zNTlDMTQ1LjU5MSA0NzQuNTIxIDEwOS4xMzcgNDg0Ljg5OSA4Mi4wMDM5IDQ3MS43MDdDNTUuMDE1NSA0NTguNTg2IDQ3LjkyMDkgNDMxLjQ0MSAzMy44NTAzIDQwOS42NTZDMjAuNDc5NCAzODguOTU0IDUuMDU1ODEgMzY4LjgzNCAwLjgyODI3OSAzNDYuMDI0Qy0zLjQ1Njg1IDMyMi45MDIgMTUuODIyMyAxMjkuMDA2IDI1LjEzMzUgMTA2Ljc0NEMzNC40Nzg0IDg0LjQwMDcgNDkuODg3NCA2My42ODYgNzAuNzkwNyA0Ni4zNjk3QzkxLjY0MDMgMjkuMDk3OSAxMTYuODM1IDE0LjM3MzkgMTQ2LjAyMiA2LjYwMDA4QzE3NC41MTIgLTAuOTg4MzE0IDIwNS4yOSAyLjY4NDg0IDIzNS41IDIuNVoiIGZpbGw9IiM3NDcwRDQiLz4KPC9zdmc+Cg==');
+	mask-image: url('data:image/svg+xml;utf8,<svg width="446" height="501" viewBox="0 0 446 501" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M235.5 2.5C265.902 2.31398 297.369 -2.97134 325.626 5.50118C354.09 14.0357 376.751 31.3933 394.579 50.1975C411.688 68.2429 415.349 90.943 426.19 111.571C437.673 133.423 443.916 323.045 444.957 346.54C446.02 370.524 431.746 393.423 416.199 414.352C400.562 435.401 379.655 453.92 354.285 468.6C328.617 483.451 300.143 498.191 267.912 500.149C236.072 502.084 208.525 484.149 177.219 479.359C145.591 474.521 109.137 484.899 82.0039 471.707C55.0155 458.586 47.9209 431.441 33.8503 409.656C20.4794 388.954 5.05581 368.834 0.828279 346.024C-3.45685 322.902 15.8223 129.006 25.1335 106.744C34.4784 84.4007 49.8874 63.686 70.7907 46.3697C91.6403 29.0979 116.835 14.3739 146.022 6.60008C174.512 -0.988314 205.29 2.68484 235.5 2.5Z" fill="#7470D4"/></svg>'); */
+	-webkit-mask-image: url('../assets/clip-bg.svg');
+	mask-image: url('../assets/clip-bg.svg');
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: top;
+	mask-position: top;
+}
+/* -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'><circle cx=\'50\' cy=\'50\' r=\'40\' fill=\'white\' /></svg>'); mask-mode: alpha; */
+.hand-svg {
+	transform-origin: bottom;
+	animation: hand-shake 1s infinite;
+	animation-duration: 2.5s; /* Change to speed up or slow down */
+	animation-iteration-count: infinite; /* Never stop waving :) */
+	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+	display: inline-block;
+}
+@keyframes hand-shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(14deg);
+	}
+	20% {
+		transform: rotate(-8deg);
+	}
+	30% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-4deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

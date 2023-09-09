@@ -1,0 +1,18 @@
+---
+import '../../styles/socialBtn.css'
+interface Props {
+	socialLink: string
+	socialLinkLabel: string
+	children: any
+}
+const { socialLink, socialLinkLabel } = Astro.props
+---
+
+<a
+	class="social-btn h-8 w-8 rounded-full bg-primary p-1.5"
+	href={socialLink}
+	aria-label={socialLinkLabel}
+	target="_blank"
+>
+	<slot />
+</a>
