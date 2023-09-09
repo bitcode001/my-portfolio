@@ -47,6 +47,9 @@ module.exports = {
 						// Add your custom color palette here
 					}
 				}
+			},
+			fontFamily: {
+				sans: ['Montserrat', 'sans-serif']
 			}
 		}
 	},
