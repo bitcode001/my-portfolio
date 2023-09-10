@@ -10,7 +10,7 @@ const { title, description, keywords, author } = Astro.props
 ---
 
 <head>
-	<GoogleAnalytics />
+	{import.meta.env.PROD && <GoogleAnalytics />}
 	<meta charset="utf-8" />
 	<link rel="icon" type="image/svg+xml" href="/brand-icon-white.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,18 +33,15 @@ const { title, description, keywords, author } = Astro.props
 	<meta property="og:title" content="Anil Rai - Developer | Designer | Programmer" />
 	<meta
 		property="og:description"
-		content="Anil Rai is a Developer, Designer, and Programmer specializing in web development and design. Explore his portfolio and insightful blog posts."
+		content="Anil Rai is a Developer, Designer, and Programmer specializing in web and mobile app development and design. Explore his portfolio and insightful blog posts."
 	/>
-	<!-- <meta property="og:type" content="website" />
-	<meta property="og:url" content="https://www.example.com/johndoe" />
-	<meta property="og:image" content="https://www.example.com/johndoe.jpg" /> -->
 
 	<!-- Twitter Card Meta Tags (for Twitter sharing) -->
 	<!-- <meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Anil Rai - Developer | Designer | Programmer" />
 	<meta
 		name="twitter:description"
-		content="Anil Rai is a Developer, Designer, and Programmer specializing in web development and design. Explore his portfolio and insightful blog posts."
+		content="Anil Rai is a Developer, Designer, and Programmer specializing in web and mobile app development and design. Explore his portfolio and insightful blog posts."
 	/>
 	<meta name="twitter:image" content="https://www.example.com/johndoe.jpg" /> -->
 
