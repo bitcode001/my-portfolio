@@ -68,6 +68,10 @@
 
 	function trackMouse(e: MouseEvent) {
 		if (cursor) {
+			// Checking whether the mouse is already on the viewport when page is loading
+			if (cursor.classList.contains('opacity-0')) {
+				cursor.classList.remove('opacity-0')
+			}
 			const w = cursor.clientWidth
 			const h = cursor.clientHeight
 			// cursor.style.top = `${e.clientY - h / 2}px`
