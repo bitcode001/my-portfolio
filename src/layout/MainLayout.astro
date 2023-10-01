@@ -1,8 +1,8 @@
 ---
-import CustomPointer from '../utils/CustomPointer.astro'
+import CustomPointer from '../components/CustomPointer.astro'
 import MainFooter from './MainFooter.astro'
 import MainHead from './MainHead.astro'
-import UnderConstructionBar from './UnderConstructionBar.astro'
+import UnderConstructionBar from '../components/UnderConstructionBar.astro'
 interface Props {
 	title: string
 	description?: string
@@ -23,7 +23,7 @@ const { title, description, keywords, author } = Astro.props
 	<body class="bg-bgCol">
 		<UnderConstructionBar />
 		<slot />
-		<CustomPointer />
+		<!-- <CustomPointer /> -->
 		<MainFooter />
 	</body>
 </html>

@@ -27,6 +27,7 @@ module.exports = {
 				warning: '#E6D00C',
 				danger: '#F81F04',
 				bgCol: '#F9F9FF',
+				lightText: '#0A0808',
 				// Add your custom color palette here
 
 				mTheme: {
@@ -43,7 +44,8 @@ module.exports = {
 						success: '#0DB56A',
 						warning: '#E6D00C',
 						danger: '#F81F04',
-						bgCol: '#F9F9FF'
+						bgCol: '#F9F9FF',
+						lightText: '#0A0808'
 						// Add your custom color palette here
 					}
 				}

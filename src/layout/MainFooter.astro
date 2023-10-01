@@ -1,8 +1,74 @@
 ---
+import Tooltip from '../components/Tooltip.astro'
 const commonTextClass = 'text-xs font-medium text-white'
 const currentYear = new Date().getFullYear()
 ---
 
+<section class="container mb-28 flex flex-col items-center justify-center">
+	<p class="mb-2 text-xl font-medium">Lets stay connected !</p>
+	<p class="text-lightText mb-8 text-sm opacity-50">London United Kingdom</p>
+
+	<p class="mb-16 text-2xl font-semibold">(+44) 07818602195</p>
+
+	<div class="flex flex-row justify-center gap-10">
+		<Tooltip tooltipLabel="LinkedIn Handle">
+			<a
+				href="https://www.linkedin.com/in/anilrai01/"
+				target="_blank"
+				class="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-white"
+			>
+				<svg
+					class="h-10 w-10"
+					enable-background="new 0 0 100 100"
+					height="100"
+					viewBox="0 0 100 100"
+					width="100"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="#0066C8"
+					><path
+						d="m80.667 14h-61.352c-2.934 0-5.315 2.325-5.315 5.188v61.617c0 2.867 2.381 5.195 5.315 5.195h61.352c2.936 0 5.333-2.328 5.333-5.195v-61.617c0-2.863-2.397-5.188-5.333-5.188zm-45.313 61.354h-10.684v-34.359h10.684zm-5.342-39.057c-3.423 0-6.19-2.774-6.19-6.194 0-3.415 2.767-6.189 6.19-6.189 3.415 0 6.189 2.774 6.189 6.189 0 3.42-2.774 6.194-6.189 6.194zm45.338 39.057h-10.667v-16.708c0-3.986-.078-9.111-5.551-9.111-5.558 0-6.405 4.341-6.405 8.822v16.998h-10.675v-34.36h10.245v4.692h.146c1.426-2.7 4.91-5.549 10.106-5.549 10.806 0 12.802 7.114 12.802 16.369v18.847z"
+					></path></svg
+				>
+			</a>
+		</Tooltip>
+
+		<Tooltip tooltipLabel="Github Handle">
+			<a
+				href="https://github.com/bitcode001"
+				target="_blank"
+				class="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-white"
+			>
+				<svg class="h-10 w-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+					><path d="m0 0h24v24h-24z" fill="#fff" opacity="0" transform="matrix(-1 0 0 -1 24 24)"
+					></path><path
+						d="m12 1a10.89 10.89 0 0 0 -11 10.77 10.79 10.79 0 0 0 7.52 10.23c.55.1.75-.23.75-.52s0-.93 0-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0 -1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11 2.37 2.37 0 0 0 3.2.89 2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91 3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.68 10.68 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84 4.15 4.15 0 0 1 1.17 2.89c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95s.2.63.75.52a10.8 10.8 0 0 0 7.5-10.22 10.89 10.89 0 0 0 -11-10.77"
+						fill="#231f20"></path></svg
+				>
+			</a>
+		</Tooltip>
+
+		<Tooltip tooltipLabel="Twitter Handle">
+			<a
+				href="https://twitter.com/anilrai011"
+				target="_blank"
+				data-tooltip-target="twitter-tooltip"
+				class="relative flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-white"
+			>
+				<svg
+					class="h-8 w-8"
+					viewBox="0 0 24 24"
+					aria-hidden="true"
+					class="r-1nao33i r-4qtqp9 r-yyyyoo r-16y2uox r-8kz0gk r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-yc9v9c"
+					><g
+						><path
+							d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+						></path></g
+					></svg
+				>
+			</a>
+		</Tooltip>
+	</div>
+</section>
 <div class="bg-primary py-4 md:py-1">
 	<div class="container flex flex-col items-center justify-between md:flex-row">
 		<div class="flex flex-row items-center">
