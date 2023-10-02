@@ -52,6 +52,41 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ['Montserrat', 'sans-serif']
+			},
+			keyframes: {
+				'reverse-spin': {
+					from: {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'custom-pulse': {
+					'0%': {
+						transform: 'scale(1)'
+					},
+					'50%': {
+						transform: 'scale(1.15)'
+					},
+					'100%': {
+						transform: 'scale(1)'
+					}
+				},
+				'custom-slide-in': {
+					'0%': {
+						transform: 'translateX(-5%)',
+						opacity: 0
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: 1
+					}
+				}
+			},
+			animation: {
+				'pulse-badge': 'custom-pulse 3s linear infinite',
+				'spin-slow': 'spin 60s linear infinite',
+				'spin-slow-x2': 'spin 120s linear infinite',
+				'spin-slow-reverse': 'reverse-spin 90s linear infinite',
+				'slide-in': 'custom-slide-in 0.5s ease-out forwards'
 			}
 		}
 	},
