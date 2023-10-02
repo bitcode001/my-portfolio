@@ -1,9 +1,10 @@
 ---
 import MainLayout from '../layout/MainLayout.astro'
 import HeroSection from '../section/HeroSection.astro'
-// import HeroSection from '../section/HeroSection';
+import SkillsetSection from '../section/SkillsetSection.tsx'
 ---
 
 <MainLayout title="Anil Rai - Programmer | Designer | Developer">
 	<HeroSection />
+	<SkillsetSection client:load />
 </MainLayout>

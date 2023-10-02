@@ -1,5 +1,8 @@
 ---
+import CustomPointer from '../components/CustomPointer.astro'
+import MainFooter from './MainFooter.astro'
 import MainHead from './MainHead.astro'
+import UnderConstructionBar from '../components/UnderConstructionBar.astro'
 interface Props {
 	title: string
 	description?: string
@@ -18,15 +21,9 @@ const { title, description, keywords, author } = Astro.props
 		author={author ?? ''}
 	/>
 	<body class="bg-bgCol">
+		<UnderConstructionBar />
 		<slot />
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-MNJJQVV7"
-				height="0"
-				width="0"
-				style="display:none;visibility:hidden"></iframe></noscript
-		>
-		<!-- End Google Tag Manager (noscript) -->
+		<CustomPointer />
+		<MainFooter />
 	</body>
 </html>

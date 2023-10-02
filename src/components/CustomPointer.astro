@@ -1,0 +1,89 @@
+<style is:global>
+	#my-cursor {
+		box-sizing: content-box;
+		position: absolute;
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		border: 1px solid #5769f8;
+		z-index: 999;
+		pointer-events: none;
+		animation: cursorAnim 0.8s infinite alternate;
+		top: 50%;
+		left: 50%;
+		transition: 0.5s ease-in-out;
+	}
+	#my-cursor::after {
+		box-sizing: content-box;
+		content: '';
+		position: absolute;
+		top: -8px;
+		left: -8px;
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		border: 8px solid #7470d4;
+		opacity: 0.5;
+		z-index: 999;
+		pointer-events: none;
+		animation: cursorRingAnim 0.5s infinite alternate;
+	}
+	@keyframes cursorAnim {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.7);
+		}
+	}
+	@keyframes cursorRingAnim {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.5);
+		}
+	}
+</style>
+<div id="my-cursor" class="opacity-0"></div>
+
+<script>
+	const cursor = document.getElementById('my-cursor')
+
+	document.addEventListener('mousemove', trackMouse)
+
+	document.addEventListener('mouseenter', transitionCursor)
+
+	document.addEventListener('mouseleave', transitionCursor)
+
+	function transitionCursor() {
+		if (cursor) {
+			if (cursor.classList.contains('opacity-0')) {
+				cursor.classList.remove('opacity-0')
+			} else {
+				cursor.classList.add('opacity-0')
+			}
+		}
+	}
+
+	function trackMouse(e: MouseEvent) {
+		if (cursor) {
+			// Checking whether the mouse is already on the viewport when page is loading
+			if (cursor.classList.contains('opacity-0')) {
+				cursor.classList.remove('opacity-0')
+			}
+			const w = cursor.clientWidth
+			const h = cursor.clientHeight
+			// cursor.style.top = `${e.clientY - h / 2}px`
+			// cursor.style.left = `${e.clientX - w / 2}px`
+
+			cursor.animate(
+				{
+					left: `${e.pageX - h / 2}px`,
+					top: `${e.pageY - w / 2}px`
+				},
+				{ duration: 500, fill: 'forwards' }
+			)
+		}
+	}
+</script>
