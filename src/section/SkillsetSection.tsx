@@ -48,7 +48,7 @@ const mySkillSet: MySkillSetInterface[] = [
 	{
 		name: 'JavaScript',
 		description:
-			'My journey started from C and then C++ and finally the one and only JavaScript. Javascript is something that made me who am I today. JavaScript was my love at first sight. Adding a little bit interactivity with JavaScript on a plain old HTML site really makes the site stand out from the crowd.'
+			'My journey started from C and then C++ and finally the one and only JavaScript. Javascript is something that made me who I am today. JavaScript was my love at first sight. Adding a little bit interactivity with JavaScript on a plain old HTML site really makes the site stand out from the crowd.'
 	},
 	{
 		name: 'TypeScript',
@@ -194,8 +194,8 @@ export default function SkillsetSection() {
 				</div>
 
 				<div className="flex w-full flex-col p-8 md:p-20">
-					<h3 className="text-lg font-medium text-primary">My Skillset</h3>
-					<h2 className="text-3xl font-semibold">My Programming Domains</h2>
+					<h2 className="text-lg font-medium text-primary">My Skillset</h2>
+					<h3 className="text-3xl font-semibold">My Programming Domains</h3>
 					{mySkillSet.map((sk, idx) => (
 						<div
 							className={cn('hidden', {
