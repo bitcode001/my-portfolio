@@ -1,0 +1,13 @@
+# robots.txt for https://www.anilrai.dev
+
+# This section allows all web robots to access all parts of the site.
+User-agent: *
+Disallow:
+
+# Example of a section you want to hide from all web robots:
+# Uncomment the following two lines to block all bots from accessing the /private/ section.
+# User-agent: *
+# Disallow: /private/
+
+# If you use a sitemap, add its URL here to help search engines discover all the URLs in your website.
+# Sitemap: https://www.anilrai.dev/sitemap-index.xml
