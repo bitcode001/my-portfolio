@@ -1,0 +1,14 @@
+.custom-floating-header {
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    z-index: 10;
+    background-color: white;
+}
+
+.custom-floating-header ul li {
+    cursor: pointer;
+}

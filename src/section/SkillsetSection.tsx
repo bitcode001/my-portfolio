@@ -67,9 +67,9 @@ export default function SkillsetSection() {
 	const iconDim = 'h-8 w-8 z-10'
 	const svgColorTransition = 'transition-colors duration-500'
 	return (
-		<section className="relative my-20 overflow-x-clip bg-indigo-50 py-10">
+		<section className="relative overflow-x-clip bg-indigo-50 py-10">
 			{/* Animating Circle */}
-			<div className="absolute -right-2 top-10 flex scale-50 items-center justify-center opacity-50 md:-right-4 md:scale-100 md:opacity-100">
+			{/* <div className="absolute -right-2 top-10 flex scale-50 items-center justify-center opacity-50 md:-right-4 md:scale-100 md:opacity-100">
 				<div
 					className="absolute z-20 h-28 w-28 animate-spin-slow rounded-full bg-transparent"
 					style={{
@@ -90,7 +90,7 @@ export default function SkillsetSection() {
 						width: '30rem'
 					}}
 				/>
-			</div>
+			</div> */}
 
 			<div className="container flex flex-col md:flex-row">
 				<div className="flex flex-row justify-between md:flex-col">

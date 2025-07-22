@@ -1,5 +1,5 @@
 ---
-import CustomPointer from '../components/CustomPointer.astro'
+// import CustomPointer from '../components/CustomPointer.astro'
 import MainFooter from './MainFooter.astro'
 import MainHead from './MainHead.astro'
 import UnderConstructionBar from '../components/UnderConstructionBar.astro'
@@ -21,9 +21,9 @@ const { title, description, keywords, author } = Astro.props
 		author={author ?? ''}
 	/>
 	<body class="bg-bgCol">
-		<UnderConstructionBar />
+		<!-- <UnderConstructionBar /> -->
 		<slot />
-		<CustomPointer />
+		<!-- <CustomPointer /> -->
 		<MainFooter />
 	</body>
 </html>

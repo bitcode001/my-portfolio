@@ -44,3 +44,22 @@
 		transform: rotate(0deg);
 	}
 }
+
+
+/* New styles */
+.hero-pattern {
+	background: url('/src/assets/square-dashed-10.svg');
+	background-size: 16px;
+	background-repeat: repeat;
+}
+.hero-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* covers full wrapper */
+  background: rgba(255, 255, 255, 0.5); /* white overlay with 50% opacity */
+  z-index: 1; /* sits above background */
+}
+.hero-pattern > * {
+	position: relative;
+	z-index: 2;
+}

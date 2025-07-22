@@ -2,12 +2,16 @@
 import MainLayout from '../layout/MainLayout.astro'
 import HeroSection from '../section/HeroSection.astro'
 import SkillsetSection from '../section/SkillsetSection.tsx'
+import FloatingHeader from '../components/FloatingHeader'
+import ExperienceSection from '../section/ExperienceSection.astro'
 ---
 
 <MainLayout
-	title="Anil Rai - Programmer | Designer | Developer"
+	title="Anil Rai - Software Engineer | Full-Stack & DevOps | 🐳 Docker 🔁 CI/CD ☁️ Cloud"
 	description="Passionate and seasoned Developer, Designer, and Programmer with a deep affinity for exploring cutting-edge technologies. Dedicated ML and AI enthusiast. Proficient in JavaScript, Python, and Dart. Holds a Bachelor's degree in Information Technology from Infrastructure University Kuala Lumpur (IUKL). Presently advancing my expertise through pursuit of an MSc in Software Engineering at the University of West London, United Kingdom."
 >
+	<FloatingHeader />
 	<HeroSection />
+	<ExperienceSection />
 	<SkillsetSection client:load />
 </MainLayout>
