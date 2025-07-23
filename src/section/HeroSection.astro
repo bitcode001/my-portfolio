@@ -8,7 +8,7 @@ import '../styles/heroSectionStyle.css'
 
 <div class="hero-pattern">
 	<div class="flex min-h-screen flex-1 flex-col justify-center">
-		<div class="flex flex-row max-w-4xl mx-auto">
+		<div class="flex flex-col items-center md:flex-row max-w-4xl mx-auto">
 			<!-- Intro Image -->
 			<Image
 				src={heroProfileIcon}
@@ -17,7 +17,7 @@ import '../styles/heroSectionStyle.css'
 			/>
 
 			<!-- Intro Card -->
-			<div class="flex flex-col ml-10">
+			<div class="flex flex-col md:ml-10">
 				<div class="flex flex-row items-center justify-center py-2 md:justify-start">
 					<svg
 						enable-background="new 0 0 128 128"
@@ -51,25 +51,25 @@ import '../styles/heroSectionStyle.css'
 							d="m16.28 76.17c.97 1.68 1.93 3.03 2.98 4.21 1.04 1.18 2.16 2.15 3.38 3.03 1.24.85 2.6 1.6 4.08 2.35.74.38 1.53.68 2.31 1.12.81.35 1.63.72 2.49 1.25-.91.34-1.84.54-2.79.69-.94.04-1.91.09-2.87-.04-1.92-.26-3.84-.93-5.52-2.1-1.65-1.19-3.02-2.84-3.77-4.71-.76-1.86-.98-3.94-.29-5.8z"
 							fill="#90a4ae"></path></svg
 					>
-					<span class="font-extrabold md:text-4xl lg:text-4xl xl:text-4xl mr-2">Hey, I am</span>
+					<span class="font-extrabold text-3xl md:text-4xl lg:text-4xl xl:text-4xl mr-2">Hey, I am</span>
 
-					<span class="font-extrabold text-primary md:text-4xl lg:text-4xl xl:text-4xl">Anil Rai</span>
+					<span class="font-extrabold text-3xl text-primary md:text-4xl lg:text-4xl xl:text-4xl">Anil Rai</span>
 				</div>
 
 
-				<span class="py-1 text-center font-extrabold md:text-left md:text-4xl lg:text-4xl xl:text-4xl">
+				<span class="py-1 text-center font-extrabold md:text-left text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
 					A <span class="text-primary">Software Engineer</span>
 				</span>
 
-				<span class="mt-4">
+				<span class="mt-4 md:text-left text-center">
 					Building scalable apps with Full‑Stack & DevOps magic
 				</span>
-				<span>
+				<span class="md:text-left text-center">
 					⚡ React • Node.js • TypeScript | 🐳 Docker • Kubernetes • CI/CD
 				</span>
 
 				<!-- Contact and Download CV -->
-				<div class="flex flex-row content-center mt-12">
+				<div class="flex flex-row justify-center md:justify-start items-center mt-12 ">
 					<a
 						href="/anil-cv.pdf"
 						download
@@ -126,35 +126,3 @@ import '../styles/heroSectionStyle.css'
 
 	</div>
 </div>
-
-<!-- <script>
-	import anime from 'animejs'
-
-	anime({
-		targets: '#my-svg',
-		d: [
-			{
-				value:
-					'M47.5,-75.3C59.8,-66.1,66.6,-49.8,70.5,-34.3C74.5,-18.7,75.5,-3.8,75.6,12.4C75.7,28.7,74.8,46.4,66.7,60.3C58.6,74.2,43.2,84.4,27,86.7C10.8,89,-6.1,83.6,-22,77.6C-37.9,71.7,-52.9,65.2,-64.2,54.4C-75.4,43.5,-83.1,28.3,-83.9,12.9C-84.8,-2.4,-79,-17.9,-72.7,-33.9C-66.5,-49.8,-59.8,-66.3,-47.6,-75.4C-35.4,-84.6,-17.7,-86.6,0,-86.5C17.7,-86.5,35.3,-84.4,47.5,-75.3Z'
-			},
-			{
-				value:
-					'M45.9,-68.6C60,-62.4,72.1,-50.5,79.1,-35.9C86,-21.4,87.7,-4.3,86.2,13C84.6,30.3,79.9,47.7,69.4,60.7C59,73.6,42.8,82.1,25.6,87.2C8.4,92.3,-9.9,94,-23.8,87.2C-37.8,80.3,-47.5,65,-55.2,50.8C-62.9,36.6,-68.6,23.7,-71.5,9.7C-74.4,-4.2,-74.5,-19.1,-70.8,-34.5C-67.1,-49.8,-59.7,-65.6,-47.3,-72.5C-34.9,-79.4,-17.4,-77.5,-0.7,-76.3C15.9,-75.2,31.9,-74.8,45.9,-68.6Z'
-			}
-		],
-		easing: 'linear',
-		duration: 5000,
-		autoplay: true,
-		loop: true,
-		direction: 'alternate'
-	})
-
-	anime({
-		targets: '.test-card',
-		translateX: 250,
-		delay: 200,
-		endDelay: 200,
-		loop: true,
-		direction: 'alternate'
-	})
-</script> -->
