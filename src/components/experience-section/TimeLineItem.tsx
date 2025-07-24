@@ -4,24 +4,24 @@ import type { ReactNode } from "react";
 interface IMajorEventItem {
   majorEvent: true;
   date: string;  // required
-  title: ReactNode;
-  desc?: ReactNode;
-  icon?: string;
-  additionalSiblingFooterNodes?: ReactNode;
 }
 
 // Case 2: majorEvent = false, date is optional
 interface INormalEventItem {
   majorEvent: false;
   date?: string; // optional
+}
+
+interface ICommonEventItem {
   title: ReactNode;
   desc?: ReactNode;
   icon?: string;
   additionalSiblingFooterNodes?: ReactNode;
+  removeTail?: boolean;
 }
 
 // Combine them into a union type
-export type ITimeLineItem = IMajorEventItem | INormalEventItem;
+export type ITimeLineItem = ICommonEventItem & (IMajorEventItem | INormalEventItem);
 
 
 type IConditionalHeader = Pick<ITimeLineItem, 'majorEvent' | 'date'>;
@@ -37,8 +37,9 @@ const ConditionalHeader: React.FC<IConditionalHeader> = (prop: IConditionalHeade
     }
 }
 
-type IBadgeIcon = Pick<ITimeLineItem, 'icon'>;
+type IBadgeIcon = Pick<ITimeLineItem, 'icon' | 'removeTail'>;
 const BadgeIcon: React.FC<IBadgeIcon> = (prop: IBadgeIcon) => {
+    const tailClass = prop.removeTail ? 'after:hidden' : 'last:after:hidden';
     if(prop.icon) {
         return (
             <div className={`cursor-pointer relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-3.5 after:w-px after:translate-x-[1.5px] after:bg-gray-200 dark:after:bg-neutral-700`}>
@@ -49,7 +50,7 @@ const BadgeIcon: React.FC<IBadgeIcon> = (prop: IBadgeIcon) => {
         )
     } else {
         return (
-            <div className={`cursor-pointer relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-3.5 after:w-px after:translate-x-[1.5px] after:bg-gray-200 dark:after:bg-neutral-700`}>
+            <div className={`cursor-pointer relative ${tailClass} after:absolute after:top-8 after:bottom-0 after:start-3.5 after:w-px after:translate-x-[1.5px] after:bg-gray-200 dark:after:bg-neutral-700`}>
                 <div className={`relative z-10 size-8 flex justify-center items-center`}>
                     <div className="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
                 </div>
@@ -67,7 +68,7 @@ const TimeLineItem: React.FC<ITimeLineItem> = (prop: ITimeLineItem) => {
             {/* <!-- Item --> */}
             <div className="flex gap-x-3">
                 {/* <!-- Icon --> */}
-                <BadgeIcon icon={prop.icon} />
+                <BadgeIcon icon={prop.icon} removeTail={prop.removeTail} />
                 {/* <!-- End Icon --> */}
 
                 {/* <!-- Right Content --> */}

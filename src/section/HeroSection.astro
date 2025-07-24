@@ -1,12 +1,13 @@
 ---
 import { Image } from 'astro:assets'
-import heroProfileIcon from '../assets/profile-icon-full.png'
+// import heroProfileIcon from '../assets/profile-icon-full.png'
+import heroProfileIcon from '../assets/profile-icon-head.png'
 import SocialButton from '../components/hero-section/SocialButton.astro'
 import '../styles/heroSectionStyle.css'
 // import VirtueCard from '../components/hero-section/VirtueCard.astro'
 ---
 
-<div class="hero-pattern">
+<section class="hero-pattern" id="hi">
 	<div class="flex min-h-screen flex-1 flex-col justify-center">
 		<div class="flex flex-col items-center md:flex-row max-w-4xl mx-auto">
 			<!-- Intro Image -->
@@ -64,22 +65,24 @@ import '../styles/heroSectionStyle.css'
 				<span class="mt-4 md:text-left text-center">
 					Building scalable apps with Full‑Stack & DevOps magic
 				</span>
-				<span class="md:text-left text-center">
-					⚡ React • Node.js • TypeScript | 🐳 Docker • Kubernetes • CI/CD
+				<span class="md:text-left text-center flex mt-1">
+					<span class="inline-flex flex-wrap items-center justify-center">
+						⚡ React • Node.js • TypeScript | Docker • Kubernetes • CI/CD
+					</span>
 				</span>
 
 				<!-- Contact and Download CV -->
-				<div class="flex flex-row justify-center md:justify-start items-center mt-12 ">
+				<div class="flex flex-col md:flex-row justify-center md:justify-start items-center mt-12 ">
 					<a
 						href="/anil-cv.pdf"
 						download
-						class="flex self-center mr-8 rounded-md border-2 border-primary px-8 py-2 text-sm font-normal text-primary md:self-baseline md:text-sm lg:text-sm xl:text-md"
+						class="flex self-center md:mr-8 rounded-md border-2 border-primary px-8 py-2 text-sm font-normal text-primary md:self-baseline md:text-sm lg:text-sm xl:text-md"
 					>
 						Download CV
 					</a>
 
 					<div
-						class="flex flex-row justify-center gap-4"
+						class="flex mt-8 md:mt-0 flex-row justify-center gap-4"
 					>
 						<SocialButton
 							socialLink="https://www.linkedin.com/in/anilrai01/"
@@ -125,4 +128,4 @@ import '../styles/heroSectionStyle.css'
 		</span> -->
 
 	</div>
-</div>
+</section>
