@@ -7,8 +7,8 @@ import BadgeAvatar from '../components/experience-section/BadgeAvatar';
 
 const ExperienceSection: React.FC = () => {
     return (
-        <section className="container py-24 max-w-4xl mx-auto" id='experience'>
-            <h2 className="font-semibold text-5xl mb-8">Experience ✨</h2>
+        <section className="container py-24 max-w-5xl mx-auto" id='experience'>
+            <h2 className="font-bold text-4xl mb-8">Experience ✨</h2>
 
             {/* <!-- Timeline --> */}
             <div className="py-8">
