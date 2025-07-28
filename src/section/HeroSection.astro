@@ -9,17 +9,19 @@ import '../styles/heroSectionStyle.css'
 
 <section class="hero-pattern" id="hi">
 	<div class="flex min-h-screen flex-1 flex-col justify-center">
-		<div class="flex flex-col items-center md:flex-row max-w-5xl mx-auto">
+		<div class="flex flex-col items-center md:flex-row max-w-5xl mx-auto mt-12">
 			<!-- Intro Image -->
 			<Image
 				src={heroProfileIcon}
-				class={'relative z-10 w-64'}
+				class={'relative z-10 md:w-64 w-40'}
 				alt={'Hero content subject image'}
+				loading={'lazy'}
+				decoding={'async'}
 			/>
 
 			<!-- Intro Card -->
 			<div class="flex flex-col md:ml-10">
-				<div class="flex flex-row items-center justify-center py-2 md:justify-start">
+				<div class="flex flex-row items-center justify-center py-2 md:justify-start mt-6 sm:mt-0">
 					<svg
 						enable-background="new 0 0 128 128"
 						viewBox="0 0 128 128"
@@ -52,20 +54,20 @@ import '../styles/heroSectionStyle.css'
 							d="m16.28 76.17c.97 1.68 1.93 3.03 2.98 4.21 1.04 1.18 2.16 2.15 3.38 3.03 1.24.85 2.6 1.6 4.08 2.35.74.38 1.53.68 2.31 1.12.81.35 1.63.72 2.49 1.25-.91.34-1.84.54-2.79.69-.94.04-1.91.09-2.87-.04-1.92-.26-3.84-.93-5.52-2.1-1.65-1.19-3.02-2.84-3.77-4.71-.76-1.86-.98-3.94-.29-5.8z"
 							fill="#90a4ae"></path></svg
 					>
-					<span class="font-extrabold text-3xl md:text-4xl lg:text-4xl xl:text-4xl mr-2">Hey, I am</span>
+					<span class="font-extrabold text-2xl sm:text-3xl lg:text-4xl xl:text-4xl mr-2">Hey, I am</span>
 
-					<span class="font-extrabold text-3xl text-primary md:text-4xl lg:text-4xl xl:text-4xl">Anil Rai</span>
+					<span class="font-extrabold text-primary text-2xl sm:text-3xl lg:text-4xl xl:text-4xl">Anil Rai</span>
 				</div>
 
 
-				<span class="py-1 text-center font-extrabold md:text-left text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
+				<span class="py-1 text-center font-extrabold md:text-left text-xl sm:text-3xl lg:text-4xl xl:text-4xl">
 					A <span class="text-primary">Software Engineer</span>
 				</span>
 
-				<span class="mt-4 md:text-left text-center">
+				<span class="mt-4 text-sm sm:text-base md:text-left text-center">
 					Building scalable apps with Full‑Stack & DevOps magic
 				</span>
-				<span class="md:text-left text-center flex mt-1">
+				<span class="text-sm sm:text-base md:text-left text-center flex mt-1">
 					<span class="inline-flex flex-wrap items-center justify-center">
 						⚡ React • Node.js • TypeScript | Docker • Kubernetes • CI/CD
 					</span>

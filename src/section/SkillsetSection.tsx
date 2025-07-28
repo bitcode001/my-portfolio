@@ -9,7 +9,7 @@ interface ISkillsBadge {
 const SkillsBadge: React.FC<ISkillsBadge> = (props: ISkillsBadge) => {
     return (
         <div className="flex flex-col items-center w-20">
-            <div className="icon size-16 bg-slate-100 p-4 rounded-full">
+            <div className="icon size-14 sm:size-16 bg-slate-100 p-3 sm:p-4 rounded-full">
                 {props.badgeIcon}
             </div>
             <span className="mt-2 text-sm text-center">{props.badgeLabel}</span>
@@ -31,7 +31,7 @@ const SkillsBadgeSection: React.FC<ISkillsBadgeSection> = (props: ISkillsBadgeSe
             <span className="absolute -top-2 left-4 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">
                 { props.sectionLabel }
             </span>
-            <div className="skills-grid-elem">
+            <div className="skills-grid-elem gap-6 sm:gap-12">
                     { props.elementSignature.map((el, index) => (
                         <SkillsBadge 
                             key={index}

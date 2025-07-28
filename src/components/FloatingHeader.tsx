@@ -3,7 +3,7 @@ import nameLogo from '../assets/Anil Rai.svg'
 
 const FloatingHeader: React.FC = () => {
     return (
-        <header className="custom-floating-header bg-bgCol flex flex-row items-center py-4 px-8">
+        <header className="custom-floating-header bg-bgCol flex flex-row items-center py-4 px-8 max-w-full">
             <div className="hidden md:block">
                 <img
                     src={nameLogo.src}
@@ -12,7 +12,7 @@ const FloatingHeader: React.FC = () => {
                 />
             </div>
 
-            <ul className='flex custom-menu-ul md:ml-6 '>
+            <ul className='flex custom-menu-ul md:ml-6 text-xs sm:text-base'>
                 <li className='mx-3'>
                     <a href='#hi'>Hi</a>
                 </li>
