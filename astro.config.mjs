@@ -9,7 +9,7 @@ export default defineConfig({
 	site: 'https://www.anilrai.dev',
   	integrations: [tailwind(), react(), partytown({
 		config: {
-		forward: ['dataLayer.push']
+			forward: ['dataLayer.push']
 		}
 	}), sitemap()]
 });
