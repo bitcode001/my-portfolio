@@ -30,6 +30,7 @@ const ExperienceSection: React.FC = () => {
                             <ul className='flex flex-col mt-4 ml-8 list-disc text-sm leading-loose text-gray-700 font-normal from-neutral-500'>
                                 <li>Configured Nginx and containerized setups to spin up and manage WooCommerce stores in the cloud.</li>
                                 <li>Built data‑migration tools to map and transfer user subscriptions from legacy systems.</li>
+                                <li>Created a solution to recover and process missed customer orders after a system outage, ensuring all orders were captured and available again in the system.</li>
                                 <li>Developed middleware adapters for seamless microservice and third‑party integrations.</li>
                                 <li>Delivered full‑stack applications with React, Node.js, and Express for high performance.</li>
                                 <li>Implemented CI/CD pipelines with Bitbucket and Docker for faster deployments.</li>

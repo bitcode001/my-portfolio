@@ -23,10 +23,10 @@ const FloatingHeader: React.FC = () => {
                     <a href='#skillset'>Skills</a>
                 </li>
                 <li className='mx-3'>
-                    <a>Education</a>
+                    <a href='#education-section'>Education</a>
                 </li>
                 <li className='mx-3'>
-                    <a>Blogs</a>
+                    <a href='#blogs-section'>Blogs</a>
                 </li>
             </ul>
         </header>

@@ -26,27 +26,24 @@ const { title, description, keywords, author } = Astro.props
 				url: 'https://www.anilrai.dev'
 			}
 		}}
-		twitter={{
-			creator: '@anilrai011'
-		}}
 		extend={{
 			// extending the default link tags
 			link: [{ rel: 'icon', type: 'image/svg+xml', href: '/brand-icon-white.svg' }],
 			// extending the default meta tags
-			meta: [
-				{
-					name: 'twitter:image',
-					content: 'https://pbs.twimg.com/profile_images/1526056751304687617/vpkATgvQ_400x400.jpg'
-				},
-				{
-					name: 'twitter:title',
-					content: 'Anil Rai'
-				},
-				{
-					name: 'twitter:description',
-					content: `Programmer | Developer | Designer JavaScript Lover #creative_coding Love Programming | Game Design & Development | Interface Design and Graphic Designing`
-				}
-			]
+			// meta: [
+			// 	{
+			// 		name: 'twitter:image',
+			// 		content: 'https://pbs.twimg.com/profile_images/1526056751304687617/vpkATgvQ_400x400.jpg'
+			// 	},
+			// 	{
+			// 		name: 'twitter:title',
+			// 		content: 'Anil Rai'
+			// 	},
+			// 	{
+			// 		name: 'twitter:description',
+			// 		content: `Programmer | Developer | Designer JavaScript Lover #creative_coding Love Programming | Game Design & Development | Interface Design and Graphic Designing`
+			// 	}
+			// ]
 		}}
 	/>
 	{import.meta.env.PROD && <GoogleAnalytics />}

@@ -1,0 +1,16 @@
+.blog-instance {
+    border-width: .5px;
+    border-color: rgba(87, 105, 248, 0.2);
+    position: relative;
+}
+.blog-instance::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 100%;
+    background: rgb(87, 105, 248);
+    z-index: -1;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}

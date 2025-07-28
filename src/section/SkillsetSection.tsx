@@ -164,7 +164,7 @@ const SkillsetSection: React.FC = () => {
 
                 </div>
 
-                <span className="italic text-gray-500">I believe in constant learning! Currently I am doing courses on Kubernetes and DevOps</span>
+                <span className="italic text-gray-500 text-sm">I believe in constant learning! Currently I am doing courses on Kubernetes and DevOps</span>
             </div>
         </section>
     )
