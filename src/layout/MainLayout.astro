@@ -3,6 +3,7 @@
 import MainFooter from './MainFooter.astro'
 import MainHead from './MainHead.astro'
 import UnderConstructionBar from '../components/UnderConstructionBar.astro'
+import FloatingHeader from '../components/FloatingHeader'
 interface Props {
 	title: string
 	description?: string
@@ -21,6 +22,7 @@ const { title, description, keywords, author } = Astro.props
 		author={author ?? ''}
 	/>
 	<body class="bg-bgCol min-h-screen flex flex-col">
+		<FloatingHeader client:load />
 		<!-- <UnderConstructionBar /> -->
 		<slot />
 		<!-- <CustomPointer /> -->
