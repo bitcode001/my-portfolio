@@ -2,7 +2,7 @@
 const EducationSection: React.FC = () => {
     const eduStyleBorder = "1px solid rgba(0, 0, 0, 0.07)";
     return (
-        <section className="container py-24 max-w-5xl mx-auto" id='education-section'>
+        <section className="container py-20 max-w-5xl mx-auto" id='education-section'>
             <h2 className="font-bold text-4xl mb-12">Education & Certifications 🎓</h2>
 
             <div className="space-y-10">
