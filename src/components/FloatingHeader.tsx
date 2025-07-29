@@ -30,7 +30,7 @@ const FloatingHeader: React.FC = () => {
                 </nav>
             </div>
 
-            <div className={`mobile-overlay fixed top-0 flex-1 w-screen min-h-[100dvh] transition-all${mobileMenuOpen ? ' backdrop-blur-md' : ''}`}></div>
+            <div className={`mobile-overlay fixed top-0 flex-1 w-screen min-h-[100dvh] transition-all ${mobileMenuOpen ? 'backdrop-blur-md' : 'hidden'}`}></div>
             {/* Mobile Nav */}
             <div className="fixed top-3 right-1/2 translate-x-1/2 w-10/12 sm:hidden flex flex-row items-center justify-between py-4 px-8 mx-2 border border-black/10 rounded-full bg-white" id="mobile-nav">
                 <a href="/" className="mr-4">
