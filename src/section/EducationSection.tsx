@@ -51,7 +51,7 @@ const EducationSection: React.FC = () => {
         before:h-1 
         before:-left-0 
         before:bg-primary 
-        before:-bottom-1 
+        before:bottom-0
         md:before:w-2 
         md:before:h-full 
         md:before:bottom-0 
@@ -67,17 +67,17 @@ const EducationSection: React.FC = () => {
             <div className="md:flex transition-all">
                 <ul className="flex flex-row justify-start md:flex-col min-w-56 md:space-y md:space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-8 mb-4 md:mb-0">
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('certificate')}>
-                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-lg w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
+                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏅</span> Certification
                         </a>
                     </li>
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('courses')}>
-                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-lg w-full ${activeTab === 'courses' ? activeClass : inactiveClass}`}>
+                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'courses' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">⏳</span> Courses
                         </a>
                     </li>
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('education')}>
-                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-lg w-full ${activeTab === 'education' ? activeClass : inactiveClass}`}>
+                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'education' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏫</span>Education
                         </a>
                     </li>
