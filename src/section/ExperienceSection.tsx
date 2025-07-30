@@ -1,5 +1,4 @@
 import TimeLineItem from '../components/experience-section/TimeLineItem';
-import '../styles/experienceStyle.css'
 import PrithakIcon from "../assets/prithak-logo.png";
 import SmaiticIcon from "../assets/smaitic-logo.jpg";
 import InspiraIcon from "../assets/inspira-logo.jpg";

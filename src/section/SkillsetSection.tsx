@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { IconAnsible, IconAstro, IconDigitalOcean, IconDocker, IconExpressJS, IconFigma, IconGit, IconGithub, IconGraphQL, IconJavaScript, IconJenkins, IconMongoDB, IconNginx, IconNodeJS, IconReact, IconReactNative, IconShopify, IconSocket, IconTypeScript, IconVSCode, IconVue } from "../components/experience-section/TechStackIcons";
-import "../styles/skillsetStyle.css";
 
 interface ISkillsBadge {
     badgeIcon: ReactNode;
@@ -31,7 +30,8 @@ const SkillsBadgeSection: React.FC<ISkillsBadgeSection> = (props: ISkillsBadgeSe
             <span className="absolute -top-2 left-4 inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset">
                 { props.sectionLabel }
             </span>
-            <div className="skills-grid-elem gap-6 sm:gap-12">
+            {/* <div className="skills-grid-elem gap-6 sm:gap-12"> */}
+            <div className="grid grid-cols-[repeat(auto-fill,_minmax(72px,_1fr))] gap-6 sm:gap-12 px-4 pt-12 pb-8 border border-black/10 rounded-lg">
                     { props.elementSignature.map((el, index) => (
                         <SkillsBadge 
                             key={index}
