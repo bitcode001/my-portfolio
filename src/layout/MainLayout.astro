@@ -1,8 +1,9 @@
 ---
-import CustomPointer from '../components/CustomPointer.astro'
+// import CustomPointer from '../components/CustomPointer.astro'
 import MainFooter from './MainFooter.astro'
 import MainHead from './MainHead.astro'
 import UnderConstructionBar from '../components/UnderConstructionBar.astro'
+import FloatingHeader from '../components/FloatingHeader'
 interface Props {
 	title: string
 	description?: string
@@ -13,17 +14,18 @@ interface Props {
 const { title, description, keywords, author } = Astro.props
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<MainHead
 		{title}
 		description={description ?? ''}
 		keywords={keywords ?? ''}
 		author={author ?? ''}
 	/>
-	<body class="bg-bgCol">
-		<UnderConstructionBar />
+	<body class="bg-bgCol min-h-screen flex flex-col">
+		<FloatingHeader client:load />
+		<!-- <UnderConstructionBar /> -->
 		<slot />
-		<CustomPointer />
+		<!-- <CustomPointer /> -->
 		<MainFooter />
 	</body>
 </html>
