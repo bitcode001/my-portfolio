@@ -26,13 +26,13 @@ const CertificationCard: React.FC<ICertificationCard> = (props: ICertificationCa
                 )}
             </div>
 
-            <div className="ec-metadata mt-4 text-xs">
-                <span className="italic text-gray-500">{props.certificateIssueDate}</span>
+            <div className="ec-metadata mt-4 text-sm">
+                <span className="italic text-gray-700 font-medium">{props.certificateIssueDate}</span>
             </div>
 
             {props.certificateLinks && (
-                <div className="ec-metalinks mt-4">
-                    <a className="text-xs text-primary" href={props.certificateLinks}>
+                <div className="ec-metalinks mt-4 text-sm">
+                    <a className="font-medium text-primary" href={props.certificateLinks}>
                         Show credentials
                     </a>
                 </div>
@@ -55,8 +55,10 @@ const EducationSection: React.FC = () => {
         md:before:w-2 
         md:before:h-full 
         md:before:bottom-0 
-        text-primary 
-        bg-primary/10
+        text-primary
+        text-sm
+        font-semibold
+        bg-primary/30
     `;
     const inactiveClass = 'hover:text-primary';
 
@@ -67,26 +69,26 @@ const EducationSection: React.FC = () => {
             <div className="md:flex transition-all">
                 <ul className="flex flex-row justify-start md:flex-col min-w-56 md:space-y md:space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-8 mb-4 md:mb-0">
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('certificate')}>
-                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
+                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏅</span> Certification
-                        </a>
+                        </span>
                     </li>
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('courses')}>
-                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'courses' ? activeClass : inactiveClass}`}>
+                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'courses' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">⏳</span> Courses
-                        </a>
+                        </span>
                     </li>
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('education')}>
-                        <a className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'education' ? activeClass : inactiveClass}`}>
+                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'education' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏫</span>Education
-                        </a>
+                        </span>
                     </li>
                 </ul>
                 
                 <div className={`mt-8 md:mt-0 flex flex-wrap gap-4 ec-certificate-result ${activeTab === 'certificate' ? 'static' : 'hidden'}`}>
                     <CertificationCard 
                         certificationTitle="Kubernetes for Beginners - Hands-on" 
-                        certificateIssueDate="Isued : July 2025" 
+                        certificateIssueDate="Issued : July 2025" 
                         certificateLinks="https://www.udemy.com/certificate/UC-a9f69da5-8f33-4a5d-9925-65251a498e49"
                     />
                     <CertificationCard 

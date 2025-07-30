@@ -31,7 +31,7 @@ const BlogInstance: React.FC<IBlogInstance> = (props: IBlogInstance) => {
                 ))}
                 </div>
 
-                <h5 className="font-semibold text-base my-2">{props.title}</h5>
+                <h4 className="font-semibold text-base my-2">{props.title}</h4>
 
                 <span className="line-clamp-2 text-sm">
                     {props.exerpt}

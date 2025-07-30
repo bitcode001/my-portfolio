@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets'
 // import heroProfileIcon from '../assets/profile-icon-full.png'
-import heroProfileIcon from '../assets/profile-icon-head.png'
-import SocialButton from '../components/hero-section/SocialButton.astro'
+import heroProfileIcon from '../assets/profile-icon-head-500.png'
+// import SocialButton from '../components/hero-section/SocialButton.astro'
 import '../styles/heroSectionStyle.css'
 // import VirtueCard from '../components/hero-section/VirtueCard.astro'
 ---
@@ -15,8 +15,8 @@ import '../styles/heroSectionStyle.css'
 				src={heroProfileIcon}
 				class={'relative z-10 md:w-64 w-40'}
 				alt={'Hero content subject image'}
-				loading={'lazy'}
-				decoding={'async'}
+				loading={'eager'}
+				decoding={'sync'}
 			/>
 
 			<!-- Intro Card -->

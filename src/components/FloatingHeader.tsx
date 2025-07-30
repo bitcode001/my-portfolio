@@ -33,8 +33,8 @@ const FloatingHeader: React.FC = () => {
             <div onClick={toggleMobileMenu} className={`mobile-overlay fixed top-0 flex-1 w-screen min-h-[100dvh] transition-all ${mobileMenuOpen ? 'backdrop-blur-md' : 'hidden'}`}></div>
             {/* Mobile Nav */}
             <div className="fixed top-3 right-1/2 translate-x-1/2 w-10/12 sm:hidden flex flex-row items-center justify-between py-4 px-8 mx-2 border border-black/10 rounded-full bg-white" id="mobile-nav">
-                <a href="/" className="mr-4">
-                    <img src={nameLogo.src} className="w-24" />
+                <a href="/" className="mr-4" aria-label="Nav Logo">
+                    <img src={nameLogo.src} className="w-24" width={'6rem'} height={'auto'} alt="Nav Logo" />
                 </a>
 
                 <button onClick={toggleMobileMenu} data-collapse-toggle="mobile-navbar" type="button" className="w-7 h-7" aria-controls="navbar-default" aria-expanded="false">
