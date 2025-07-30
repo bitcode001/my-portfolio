@@ -30,7 +30,7 @@ const FloatingHeader: React.FC = () => {
                 </nav>
             </div>
 
-            <div className={`mobile-overlay fixed top-0 flex-1 w-screen min-h-[100dvh] transition-all ${mobileMenuOpen ? 'backdrop-blur-md' : 'hidden'}`}></div>
+            <div onClick={toggleMobileMenu} className={`mobile-overlay fixed top-0 flex-1 w-screen min-h-[100dvh] transition-all ${mobileMenuOpen ? 'backdrop-blur-md' : 'hidden'}`}></div>
             {/* Mobile Nav */}
             <div className="fixed top-3 right-1/2 translate-x-1/2 w-10/12 sm:hidden flex flex-row items-center justify-between py-4 px-8 mx-2 border border-black/10 rounded-full bg-white" id="mobile-nav">
                 <a href="/" className="mr-4">
@@ -49,19 +49,19 @@ const FloatingHeader: React.FC = () => {
 
                 <nav className={`${!mobileMenuOpen ? 'hidden ' : ''}absolute top-20 rounded-3xl p-8 left-0 bg-white border border-black/10 w-full`} id="mobile-navbar">
                     <ul className="">
-                        <li className='mb-2 cursor-pointer' onClick={toggleMobileMenu}>
+                        <li className='mb-4 cursor-pointer' onClick={toggleMobileMenu}>
                             <a href="#hi">Hi</a>
                         </li>
-                        <li className="mb-2 cursor-pointer" onClick={toggleMobileMenu}>
+                        <li className="mb-4 cursor-pointer" onClick={toggleMobileMenu}>
                             <a href="#experience">Experience</a>
                         </li>
-                        <li className="mb-2 cursor-pointer" onClick={toggleMobileMenu}>
+                        <li className="mb-4 cursor-pointer" onClick={toggleMobileMenu}>
                             <a href="#skillset">Skills</a>
                         </li>
-                        <li className="mb-2 cursor-pointer" onClick={toggleMobileMenu}>
+                        <li className="mb-4 cursor-pointer" onClick={toggleMobileMenu}>
                             <a href="#education-section">Certifications</a>
                         </li>
-                        <li className="mb-2 cursor-pointer" onClick={toggleMobileMenu}>
+                        <li className="mb-4 cursor-pointer" onClick={toggleMobileMenu}>
                             <a href="#blogs-section">Blogs</a>
                         </li>
                     </ul>
