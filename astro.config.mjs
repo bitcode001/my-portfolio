@@ -4,12 +4,14 @@ import react from '@astrojs/react';
 import sitemap from "@astrojs/sitemap";
 import partytown from '@astrojs/partytown';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.anilrai.dev',
+    site: 'https://www.anilrai.dev',
   	integrations: [tailwind(), react(), partytown({
-		config: {
-			forward: ['dataLayer.push']
-		}
-	}), sitemap()]
+        config: {
+            forward: ['dataLayer.push']
+        }
+		}), sitemap(), mdx()]
 });

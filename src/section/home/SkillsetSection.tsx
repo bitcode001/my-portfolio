@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { IconAnsible, IconAstro, IconDigitalOcean, IconDocker, IconExpressJS, IconFigma, IconGit, IconGithub, IconGraphQL, IconJavaScript, IconJenkins, IconMongoDB, IconNginx, IconNodeJS, IconReact, IconReactNative, IconShopify, IconSocket, IconTypeScript, IconVSCode, IconVue } from "../components/experience-section/TechStackIcons";
+import { IconAnsible, IconAstro, IconDigitalOcean, IconDocker, IconExpressJS, IconFigma, IconGit, IconGithub, IconGraphQL, IconJavaScript, IconJenkins, IconMongoDB, IconNginx, IconNodeJS, IconReact, IconReactNative, IconShopify, IconSocket, IconTypeScript, IconVSCode, IconVue } from "../../components/experience-section/TechStackIcons.tsx";
 
 interface ISkillsBadge {
     badgeIcon: ReactNode;

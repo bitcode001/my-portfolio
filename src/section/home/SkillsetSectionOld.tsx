@@ -1,5 +1,5 @@
 import { useState, type PropsWithChildren } from 'react'
-import { cn } from '../utils/m-utils'
+import { cn } from '../../utils/m-utils'
 
 interface SkillBadgeInterface extends PropsWithChildren {
 	activeLang: number
