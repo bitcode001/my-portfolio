@@ -22,4 +22,7 @@
             "sidebar sidebar"
         ;
     }
+    .blog-sidebar {
+        margin-top: 2rem;
+    }
 }

@@ -3,7 +3,7 @@ interface IBlogBadge {
 }
 export const ContentBadge: React.FC<IBlogBadge> = (props: IBlogBadge) => {
     return (
-        <span className="inline-flex mr-2 items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-blue-700/10 ring-inset">
+        <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-blue-700/10 ring-inset">
             {props.badgeName}
         </span>
     )
@@ -27,10 +27,10 @@ export const ContentInstance: React.FC<IBlogInstance> = (props: IBlogInstance) =
             </div> */}
 
             <div className="flex flex-col h-full blog-info-cart px-4 py-6">
-                <div className="blog-badge">
-                {props.tags.map((el, idx) => (
-                    <ContentBadge key={idx} badgeName={el} />
-                ))}
+                <div className="blog-badge flex flex-wrap gap-2">
+                    {props.tags.map((el, idx) => (
+                        <ContentBadge key={idx} badgeName={el} />
+                    ))}
                 </div>
 
                 <h4 className="font-semibold text-base my-2">{props.title}</h4>

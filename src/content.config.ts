@@ -22,7 +22,8 @@ const blog = defineCollection({
         author: reference('authors').default('Anonymous'),
         // Reference an array of related posts from the `blog` collection by `slug`
         relatedPosts: z.array(reference('blog')).optional(),
-        time_read: z.string()
+        time_read: z.string(),
+        featured: z.boolean()
     })
 });
 

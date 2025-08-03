@@ -57,8 +57,8 @@ const EducationSection: React.FC = () => {
         md:before:bottom-0 
         text-primary
         text-sm
-        font-semibold
-        bg-primary/30
+        font-base
+        bg-primary/20
     `;
     const inactiveClass = 'hover:text-primary';
 
