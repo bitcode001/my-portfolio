@@ -5,23 +5,71 @@ image: { src: '', alt: 'JavaScript Blog Alt Image' }
 tags: ['JavaScript', 'Frontend', 'Design Patterns']
 excerpts: 'If you are a JavaScript developer, or looking forward to learn JavaScript, you might have heard about this debatable statement.'
 publish_date: 2025-06-30
-time_read: "5 min read"
+time_read: "3 min read"
 featured: true
 ---
-> Everything in JavaScript is an Object!
+> **Everything in JavaScript is an Object!**
 
-Well in JavaScript, almost everything you work with behaves like an object — from arrays and functions to even primitive types.
+Or is it?
 
-Have you ever wondered how you could assign a string to a variable and magically you can now access a method from inside that string variable?
+JavaScript, under the hood, is an object-oriented programming language. This means that objects are the fundamental building blocks of almost everything in JavaScript.
+
+In fact, almost everything you work with in JavaScript behaves like an object, from arrays and functions to even primitive types.
+
+Have you ever wondered why, when you create a variable and assign a string to it, you can magically access a method from that variable? Yet, when you check the type of it, it logs as a `string`?
 
 ```js
 JavaScript
 
-const a = "Apple"
-a.toUpperCase() // APPLE
-typeof a // 'string'
+const a = "Apple";
+a.toUpperCase(); // APPLE
+typeof a; // 'string'
 ```
 
+This is possible due to a concept in JavaScript called **Autoboxing**. Let’s unpack this powerful concept and understand what it really means.
 
+**Autoboxing**, also known as *Primitive Wrapping*, is the process where JavaScript temporarily wraps a variable with a corresponding primitive object so that you can access properties or methods that belong to its object type.
 
-Let’s unpack this powerful concept and see what does it really means.
+This process occurs when you attempt to access a method or property on a primitive type, as in our example, `a.toUpperCase()`.
+
+We have access to hidden properties on almost all common primitive types:
+
+```js
+JavaScript
+
+// String
+const eg_string = "Hello";
+eg_string.length; // 5
+
+// Number
+const eg_number = 123;
+eg_number.toFixed(2); // '123.00'
+
+// Boolean
+const eg_bool = true;
+eg_bool.toString(); // 'true'
+
+// Array
+const eg_array = [1, 2, 3];
+eg_array.length; // 3
+
+// Object
+const eg_obj = { a: 1, b: 2 };
+eg_obj.hasOwnProperty('a'); // true
+
+// Function
+const eg_fn = function greet() {
+    console.log('Hi !');
+}
+eg_fn.name // 'greet'
+```
+
+In the above examples, all we did was define a variable and assign a value to it. Yet, we were still able to access member properties and methods from those variables. This gives us the impression that those variables are not primitive types, but predefined primitive object types.
+
+This temporary wrapper object includes all the necessary methods (like `toUpperCase()`, `toFixed()`, etc.). After the method call completes, the wrapper object is discarded. It's a seamless process that allows primitives to behave like objects when needed.
+
+So, while the statement *"Everything in JavaScript is an object"* is a powerful and simplified one, when you dive deeper, it can be a bit misleading.
+
+A more accurate version might be:
+
+> *In JavaScript, almost everything is an object. Even primitive types can temporarily behave like objects through a powerful technique called Autoboxing, but only when you need them to.*

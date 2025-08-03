@@ -46,19 +46,11 @@ type IActiveTab = 'certificate' | 'courses' | 'education';
 const EducationSection: React.FC = () => {
     const [activeTab, setActiveTab] = useState<IActiveTab>('certificate');
     const activeClass = `
-        before:absolute 
-        before:w-full 
-        before:h-1 
-        before:-left-0 
-        before:bg-primary 
-        before:bottom-0
-        md:before:w-2 
-        md:before:h-full 
-        md:before:bottom-0 
         text-primary
         text-sm
         font-base
         bg-primary/20
+        rounded-lg
     `;
     const inactiveClass = 'hover:text-primary';
 
@@ -69,17 +61,17 @@ const EducationSection: React.FC = () => {
             <div className="md:flex transition-all">
                 <ul className="flex flex-row justify-start md:flex-col min-w-56 md:space-y md:space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-8 mb-4 md:mb-0">
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('certificate')}>
-                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
+                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏅</span> Certification
                         </span>
                     </li>
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('courses')}>
-                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'courses' ? activeClass : inactiveClass}`}>
+                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 w-full ${activeTab === 'courses' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">⏳</span> Courses
                         </span>
                     </li>
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('education')}>
-                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 rounded-tr-lg rounded-tl-lg md:rounded-tl-none md:rounded-br-lg w-full ${activeTab === 'education' ? activeClass : inactiveClass}`}>
+                        <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 w-full ${activeTab === 'education' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏫</span>Education
                         </span>
                     </li>

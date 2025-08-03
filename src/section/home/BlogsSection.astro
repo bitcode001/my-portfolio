@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 
 const blogs = await getCollection('blog');
 const sorted = blogs.sort((a, b) => b.data.publish_date.getTime() - a.data.publish_date.getTime()).slice(0,3);
+const featured = sorted.filter(el => el.data.featured);
 ---
 
 <section class="py-24 bg-white -z-0" id='blogs-section'>
@@ -23,7 +24,7 @@ const sorted = blogs.sort((a, b) => b.data.publish_date.getTime() - a.data.publi
 
         {/* <div class="blog-row-wrapper flex flex-row gap-4 flex-wrap"> */}
         <div class="grid grid-cols-[repeat(auto-fill,_minmax(240px,_1fr))] gap-4">
-            {sorted.map(el => (
+            {featured.map(el => (
                 <ContentInstance 
                     title={el.data.title}
                     tags={el.data.tags}
