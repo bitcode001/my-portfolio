@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
+import BlogLayout from '../../layout/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({ params: { slug: post.id } }));
+}
+
+type Props = CollectionEntry<'blog'>;
+
+const post = await getEntry('blog', Astro.params.slug);
+if (!post) throw new Error('Blog post not found');
+const { Content } = await render(post);
+const publishDate = `${post.data.publish_date.getUTCFullYear()}-${post.data.publish_date.getUTCMonth() + 1}-${post.data.publish_date.getUTCDate()}`
+---
+
+<BlogLayout {...post.data}>
+  <section class="container py-24 max-w-5xl mx-auto flex flex-col flex-1 prose">
+    <h1 class="text-3xl font-bold mb-4">{post.data.title}</h1>
+    <div class="blog-meta flex mb-6 text-gray-700 text-sm">
+      <div class="published-date flex items-center mr-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-1">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+        </svg>
+        <span>{publishDate}</span>
+      </div>
+      <div class="read-time flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-1">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        <span>{post.data.time_read}</span>
+      </div>
+    </div>
+    <div class="badge-row flex flex-row mb-6 gap-2">
+      {
+        post.data.tags.map(el => (
+          <span class="inline-flex items-center rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-blue-700/10 ring-inset">
+            {el}
+          </span>
+        ))
+      }
+    </div>
+
+    <p class="mb-2">{post.data.excerpts}</p>
+
+    <article>
+      <Content />
+    </article>
+  </section>
+</BlogLayout>

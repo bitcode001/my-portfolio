@@ -1,0 +1,81 @@
+---
+// import { Image } from 'astro:assets';
+// import Image from 'astro/components/Image.astro';
+import { ContentInstance } from '../../components/common/ContentCard';
+import MainLayout from '../../layout/MainLayout.astro'
+import "../../styles/blogPageStyle.css";
+
+import { getCollection, getEntry } from 'astro:content';
+
+const allBlogPosts = await getCollection('blog');
+
+const sortedBlogs = allBlogPosts.sort(
+  (a, b) => b.data.publish_date.valueOf() - a.data.publish_date.valueOf(),
+);
+
+const allTags = allBlogPosts.map(el => el.data.tags).flat();
+const featuredBlogs = sortedBlogs.filter(el => el.data.featured);
+
+---
+
+<MainLayout
+	title="Anil Rai - Software Engineer | Full-Stack & DevOps | 🐳 Docker 🔁 CI/CD ☁️ Cloud"
+	description="Building scalable apps with Full‑Stack & DevOps magic⚡ React • Node.js • TypeScript | Docker • Kubernetes • CI/CD"
+>
+	<section class="container py-24 flex flex-col flex-1">
+		<h2 class="inline-flex font-extrabold text-4xl leading-tight w-fit ">Learning : <br /> We read we learn, we write we understand! </h2>
+		<span class="inline-flex italic mt-2">- Anil Rai</span>
+		<section class="blog-hero-container mt-8">
+			<div class="blog-hero-post">
+				<!-- <img
+					src={blogPageCover.src} 
+					alt={'Blog Featured Image'}
+					class={'w-full h-[38rem] object-cover object-top'}
+					width={blogPageCover.width}
+					height={blogPageCover.height}
+				/> -->
+
+				<section class="grid grid-cols-[repeat(auto-fill,_1fr)] gap-4">
+					<!-- <div class="blog-card"> -->
+					{sortedBlogs.map(el => (
+						<ContentInstance title={el.data.title} exerpt={el.data.excerpts} tags={el.data.tags} slug={el.id} />
+					))}
+					<!-- </div> -->
+				</section>
+			</div>
+
+			<!-- Sidebar -->
+			<div class="blog-sidebar">
+				<div class="latest-blogs border border-primary/30 p-6 rounded-xl mb-6">
+					<h3 class="font-semibold text-base mb-6">Featured Blogs</h3>
+
+					<ul class="space-y-3 text-sm text-gray-700">
+						{featuredBlogs.map(el => (
+							<li class="cursor-pointer text-gray-700 hover:text-primary">
+								<a href={`/blog/${el.id}`}>{el.data.title}</a>
+							</li>	
+						))}
+					</ul>
+				</div>
+				<div class="tags border border-primary/30 p-6 rounded-xl mb-6">
+					<h3 class="font-semibold text-base mb-6">Tags</h3>
+					<div class="tag-list flex flex-wrap gap-2">
+						{allTags.map((el, idx) => (
+							<span id="badge-dismiss-default" class="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-gray-500 bg-gray-200 rounded-sm dark:bg-blue-900 dark:text-blue-300">
+								{el}
+								{/* <button type="button" class="inline-flex items-center p-1 ms-2 text-sm text-blue-400 bg-transparent rounded-xs hover:bg-blue-200 hover:text-blue-900 dark:hover:bg-blue-800 dark:hover:text-blue-300" data-dismiss-target="#badge-dismiss-default" aria-label="Remove">
+									<svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+									</svg>
+
+									<span class="sr-only">Remove badge</span>
+								</button> */}
+							</span>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</section>
+</MainLayout>

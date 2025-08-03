@@ -1,0 +1,39 @@
+---
+import { ContentInstance } from "../../components/common/ContentCard.tsx";
+import { getCollection } from "astro:content";
+
+const blogs = await getCollection('blog');
+const sorted = blogs.sort((a, b) => b.data.publish_date.getTime() - a.data.publish_date.getTime()).slice(0,3);
+const featured = sorted.filter(el => el.data.featured);
+---
+
+<section class="py-24 bg-white -z-0" id='blogs-section'>
+    <div class="container max-w-5xl mx-auto">
+        <h2 class="font-bold text-4xl mb-8">Blogs 📖</h2>
+
+        <div class="flex justify-between mb-6">
+            <h3>I do write sometimes ! </h3>
+            <a href="/blog" class="flex justify-center items-center cursor-pointer">
+                <span class="mr-2 text-primary text-sm">Show All</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill={'#5769F8'}>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289Z" fill={"#5769F8"}/>
+                </svg>
+            </a>
+        </div>
+
+        {/* <div class="blog-row-wrapper flex flex-row gap-4 flex-wrap"> */}
+        <div class="grid grid-cols-[repeat(auto-fill,_minmax(240px,_1fr))] gap-4">
+            {featured.map(el => (
+                <ContentInstance 
+                    title={el.data.title}
+                    tags={el.data.tags}
+                    exerpt={el.data.excerpts}
+                    slug={el.id}
+                />
+            ))}
+        </div>
+
+        <!-- <span class="italic text-gray-500 text-xs flex pt-8">🛠️ I am still working on the blog section and internal pages. Your patience is highly appreciated. 🙏</span> -->
+    </div>
+</section>
