@@ -59,7 +59,7 @@ const EducationSection: React.FC = () => {
             <h2 className="font-bold text-4xl mb-12">Education & Certifications 🎓</h2>
 
             <div className="md:flex transition-all">
-                <ul className="flex flex-row justify-start md:flex-col min-w-56 md:space-y md:space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-8 mb-4 md:mb-0">
+                <ul className="flex flex-row justify-start md:flex-col min-w-52 md:space-y md:space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:me-8 mb-4 md:mb-0">
                     <li className="cursor-pointer relative" onClick={() => setActiveTab('certificate')}>
                         <span className={`inline-flex flex-wrap justify-center sm:justify-start items-center px-5 py-3 w-full ${activeTab === 'certificate' ? activeClass : inactiveClass}`}>
                             <span className="mr-1">🏅</span> Certification
@@ -79,14 +79,14 @@ const EducationSection: React.FC = () => {
                 
                 <div className={`mt-8 md:mt-0 flex flex-wrap gap-4 ec-certificate-result ${activeTab === 'certificate' ? 'static' : 'hidden'}`}>
                     <CertificationCard 
+                        certificationTitle="Dive Into Ansible - Beginner to Expert in Ansible - DevOps" 
+                        certificateIssueDate="Issued : Sep 2025" 
+                        certificateLinks="https://www.udemy.com/certificate/UC-c47c8ec4-2cb6-448a-8f84-5e0fa3d841d7/"
+                    />
+                    <CertificationCard 
                         certificationTitle="Kubernetes for Beginners - Hands-on" 
                         certificateIssueDate="Issued : July 2025" 
                         certificateLinks="https://www.udemy.com/certificate/UC-a9f69da5-8f33-4a5d-9925-65251a498e49"
-                    />
-                    <CertificationCard 
-                        certificationTitle="JavaScript Algorithm and DataStructures" 
-                        certificateIssueDate="Issued : March 2020" 
-                        certificateLinks="https://www.freecodecamp.org/certification/anilrai01/javascript-algorithms-and-data-structures"
                     />
                 </div>
 
@@ -96,15 +96,15 @@ const EducationSection: React.FC = () => {
                         certificateIssueDate="Ongoing" 
                     />
                     <CertificationCard 
-                        certificationTitle="Ansible Automation" 
+                        certificationTitle="Networking and Database Design" 
                         certificateIssueDate="Ongoing" 
                     />
                 </div>
 
                 <div className={`mt-8 md:mt-0 flex flex-wrap gap-4 ec-courses-result ${activeTab === 'education' ? 'static' : 'hidden'}`}>
                     <CertificationCard 
-                        certificationTitle="University of West London, United Kingdom" 
-                        certificationSubTitle="London, United Kingdom" 
+                        certificationTitle="MSc Software Engineering" 
+                        certificationSubTitle="University of West London, United Kingdom" 
                         certificateIssueDate="Graduated : July 2025" 
                     />
                     <CertificationCard 
