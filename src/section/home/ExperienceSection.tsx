@@ -1,8 +1,8 @@
-import TimeLineItem from '../../components/experience-section/TimeLineItem';
+import TimeLineItem from '../../components/experience-section/TimeLineItem.js';
 import PrithakIcon from "../../assets/prithak-logo.png";
 import SmaiticIcon from "../../assets/smaitic-logo.jpg";
 import InspiraIcon from "../../assets/inspira-logo.jpg";
-import BadgeAvatar from '../../components/experience-section/BadgeAvatar';
+import BadgeAvatar from '../../components/experience-section/BadgeAvatar.js';
 
 const ExperienceSection: React.FC = () => {
     return (
